@@ -8,21 +8,20 @@
  */
 int main(void)
 {
-	int x = 0, y;
+	int x = 0, y = 0;
 
 	while (x <= 99)
 	{
-		y = x;
 		while (y <= 99)
 		{
 			if (y != x)
 			{
-				putchar((x / 10) + 48);
-				putchar((x % 10) + 48);
+				putchar((x / 10) + '0');
+				putchar((x % 10) + '0');
 				putchar(' ');
-				putchar((y / 10) + 48);
-				putchar((x % 10) + 48);
-				if (x != 98 || y != 99)
+				putchar((y / 10) + '0');
+				putchar((y % 10) + '0');
+				if (!((x == 98) && (y == 99)))
 				{
 					putchar(',');
 					putchar(' ');
@@ -31,7 +30,8 @@ int main(void)
 			y++;
 		}
 		x++;
+		y = x;
 	}
 	putchar('\n');
-	return (0);	
+	return (0);
 }
