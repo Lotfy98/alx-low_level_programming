@@ -8,18 +8,26 @@
  */
 int main(void)
 {
-	int i = 0;
+	int x = 0, y;
 
-	while (i <= 99)
+	while (x <= 9)
 	{
-	putchar(i + '0');
-	if (i != 9)
-	{
-	putchar(',');
-	putchar(' ');
-	putchar('0');
-	}
-	 i++;
+		y = 0;
+		while (y <= 9)
+		{
+			if (x != y && x < y)
+			{
+				putchar(x + 48);
+				putchar(y + 48);
+				if (x + y != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			y++;
+		}
+		x++;
 	}
 	putchar('\n');
 	return (0);
