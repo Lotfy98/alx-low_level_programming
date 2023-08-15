@@ -2,9 +2,10 @@
 /**
  *add - function to add two integers
  *
- *@a, b: integers
+ *@a: integer
+ *@b: integer
  *
- * Retrun: result
+ * Retrun: result sum of a and b
  */
 int add(int a, int b)
 {
