@@ -25,11 +25,11 @@ void print_times_table(int n)
 				{
 					_putchar(' ');
 				}
-				else if (z <= 99)
+				if (z <= 99)
 				{
 					_putchar(' ');
 				}
-				else if (z >= 100)
+				if (z >= 100)
 				{
 					_putchar((z / 100) + 48);
 					_putchar((z / 10) % 10 + 48);
@@ -43,5 +43,4 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 	}
-	putchar('\n');
 }
