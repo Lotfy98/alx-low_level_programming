@@ -11,8 +11,9 @@ int main(void)
 	char x = "_putchar";
 	int i = 1;
 
-	while (i = 1)
+	while (i < 8)
 	{
+		i++;
 		_putchar(x);
 		_putchar('\n');
 	}
