@@ -18,6 +18,7 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
+
 				z = x * y;
 
 				if (z <= 9)
@@ -42,4 +43,5 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 	}
+	putchar('\n');
 }
