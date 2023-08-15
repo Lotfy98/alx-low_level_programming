@@ -3,17 +3,14 @@
  *print_alphabet - utilizing putchar to print alphabets
  *
  *Description: print alphabets
- *
- *Retrun: 0 to success
  */
 void print_alphabet(void)
 {
-	char x = 'a';
+	int x;
 
-	while (x < 'z')
+	for (x = 'a'; x <= 'z'; x++)
 	{
 		_putchar(x);
-		x++;
 	}
 	putchar('\n');
 }
