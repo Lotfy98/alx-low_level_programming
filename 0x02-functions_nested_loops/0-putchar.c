@@ -10,7 +10,7 @@ int main(void)
 {
 	char x[] = "_putchar";
 	{
-		_putchar(x[i]);
+		_putchar(x[]);
 		_putchar('\n');
 	}
 	return (0);
