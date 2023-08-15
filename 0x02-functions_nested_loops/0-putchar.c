@@ -9,9 +9,13 @@
 int main(void)
 {
 	char x[] = "_putchar";
-	{
-		_putchar(x[]);
+
+	for (int i = 0; i < 8; i++)
+
+
+		_putchar(x[i]);
 		_putchar('\n');
-	}
+
+
 	return (0);
 }
