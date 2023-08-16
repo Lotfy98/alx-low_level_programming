@@ -4,7 +4,7 @@
  *
  *Description: -ve or +ve integer determine
  *
- * Return: 0
+ * Return: 0 to success
  */
 int main(void)
 {
