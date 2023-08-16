@@ -18,7 +18,7 @@ int main(void)
 		f1 = f2;
 		f2 = x;
 
-		if (i === 49)
+		if (i == 49)
 		{
 			printf("\n");
 		}
