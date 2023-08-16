@@ -26,5 +26,5 @@ int main(void)
 		f2 = x;
 	}
 	printf("%.0f\n", totalSum);
-	retrun (0);
+	return (0);
 }
