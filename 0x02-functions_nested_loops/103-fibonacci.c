@@ -3,7 +3,7 @@
  *main - Entry point
  *
  *Description:
- * 
+ *
  *Return: 0 to success
  */
 int main(void)
