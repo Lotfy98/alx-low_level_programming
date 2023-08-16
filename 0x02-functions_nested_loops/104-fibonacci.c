@@ -47,7 +47,7 @@ int main(void)
 			printf("%d", 0);
 			initial0s--;
 		}
-		printf("lu", f1);
+		printf("%lu", f1);
 
 		sum = (f1 +f2) % mx;
 		sumo = f1o + f2o + (f1 + f2) / mx;
