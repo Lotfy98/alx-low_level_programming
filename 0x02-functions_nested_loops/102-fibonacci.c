@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *mai - ENTRY POINT
+ *main - ENTRY POINT
  *
  *Description: print first 50 fibonacci nums form 1, 2
  *
