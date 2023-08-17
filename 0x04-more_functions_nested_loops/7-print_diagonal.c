@@ -2,6 +2,7 @@
 /**
  *print_diagonal - print diagonal line
  *@n: number of time to print character
+ *Return: nothing
  */
 void print_diagonal(int n)
 {
