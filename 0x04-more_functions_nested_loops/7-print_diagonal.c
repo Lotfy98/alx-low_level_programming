@@ -9,7 +9,7 @@ void print_diagonal(int n)
 	{
 		_putchar('\n');
 	}
-	else if (n > 0)
+	else
 	{
 		int x = 1;
 		int y = 1;
