@@ -23,6 +23,6 @@ int main(void)
 	{
 		largestPrime = num;
 	}
-	printf("%d\n", largestPrime);
+	printf("%ld\n", largestPrime);
 	return (0);
 }
