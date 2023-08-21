@@ -24,12 +24,17 @@ int _strlen(char *s)
  */
 void rev_string(char *s)
 {
-	int x = _strlen(s) - 1;
+	int x = 0; /*start point*/
+	int y = _strlen(s) - 1; /*end point without */
+	char z;   /*temporary variable to swap bet. x & y*/
 
-	while (x >= 0)
+	while (x < y)
 	{
-		_putchar(s[x]);
-		x--;
+		z = s[x]; 
+		s[x] = s[y];
+		s[y] = z;
+		x++;
+		y--;
 	}
 	_putchar('\n');
 }
