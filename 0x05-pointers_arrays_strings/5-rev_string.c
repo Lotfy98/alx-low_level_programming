@@ -28,7 +28,7 @@ void rev_string(char *s)
 	int y = _strlen(s) - 1; /*end point without */
 	char z;   /*temporary variable to swap bet. x & y*/
 
-	while (x < y)
+	while (x <= y)
 	{
 		z = s[x]; 
 		s[x] = s[y];
