@@ -26,7 +26,7 @@ void puts2(char *str)
 {
 	int i = 0;
 
-	while (i <= _strlen(str))
+	while (i < _strlen(str))
 	{
 		_putchar(str[i]);
 		i += 2;
