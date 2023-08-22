@@ -23,8 +23,8 @@ int _strlen(char *s)
 void puts_half(char *str)
 {
 	int i;
+	int x = _strlen(str);
 	int s = x;
-	int x = _strlen(s);
 	int z = x - 1;
 
 	while (i == s && i <= z)
