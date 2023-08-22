@@ -27,10 +27,9 @@ void puts_half(char *str)
 	int s = x;
 	int z = x - 1;
 
-	while (i == s && i <= z)
+	for (i = s; i <= z; i++)
 	{
 		_putchar(str[i]);
-		i++;
 	}
 	_putchar('\n');
 }
