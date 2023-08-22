@@ -22,14 +22,17 @@ int _strlen(char *s)
  */
 void puts_half(char *str)
 {
-	int i;
 	int x = _strlen(str);
-	int s = x;
-	int z = x - 1;
+	int y = x / 2;
 
-	for (i = s; i <= z; i++)
+	if ((x % 2) == 1)
 	{
-		_putchar(str[i]);
+		y++;
+	}
+	while ( y < x)
+	{
+		_putchar(str[y]);
+		y++;
 	}
 	_putchar('\n');
 }
