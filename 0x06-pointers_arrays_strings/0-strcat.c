@@ -24,18 +24,12 @@ int _strlen(char *s)
  */
 char *_strcat(char *dest, char *src)
 {
-	int destLength = _strlen(dest);
-	int srcLength = _strlen(src);
-	int i = 0;
+	int i, y;
 
-	dest = destLength;
-	while (i < srcLength)
+	i = _strlen(dest);
+	for (y = 0; src[y]; y++)
 	{
-		i++;
-		*dest = *src;
-		*dest++;
-		*src++;
+		*dest[i++] = src[y];
 	}
-	*dest = '\0';
 	return (dest);
 }
