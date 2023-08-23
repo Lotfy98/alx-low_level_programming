@@ -29,7 +29,7 @@ char *_strcat(char *dest, char *src)
 	i = _strlen(dest);
 	for (y = 0; src[y]; y++)
 	{
-		*dest[i++] = src[y];
+		dest[i++] = src[y];
 	}
 	return (dest);
 }
