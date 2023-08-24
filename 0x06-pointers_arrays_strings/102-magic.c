@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ *main - ENTRY POINT
+ *Description: complete function
+ *Return: 0 to success
+ */
 int main(void)
 {
 int n;
