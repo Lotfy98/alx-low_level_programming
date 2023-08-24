@@ -37,7 +37,7 @@ int isDelimeter(char c)
 char *cap_string(char *s)
 {
 	char *ptr = s;
-	int delimet = 1;
+	int delimit = 1;
 
 	while (*s)
 	{
@@ -53,7 +53,7 @@ char *cap_string(char *s)
 		else
 		{
 			delimit = 0;
-		}
+i		}
 		s++;
 	}
 	return (ptr);
