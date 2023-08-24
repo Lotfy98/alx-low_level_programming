@@ -23,7 +23,9 @@ int _strlen(char *s)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = _strlen(n1), int e = _strlen(n2), int k, f, s, d = 0;
+	int i = _strlen(n1);
+	int e = _strlen(n2);
+	int l, k, f, s, d = 0;
 
 	if (i > e)
 		l = i;
