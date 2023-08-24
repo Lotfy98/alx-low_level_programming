@@ -6,10 +6,11 @@
  */
 char *leet(char *s)
 {
+	int *z = s;
 	int i = 0;
 	char x[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	char y[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
-	
+
 	while (*s)
 	{
 		for (i = 0; i <= 9 ; i++)
@@ -21,7 +22,5 @@ char *leet(char *s)
 		}
 		s++;
 	}
-	return (s);
+	return (z);
 }
-
-		
