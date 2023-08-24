@@ -4,8 +4,6 @@
  *Description: return a[2] = 98
  *Return: 0 to success
  */
-#include <stdio.h>
-
 int main(void)
 {
 	int n;
