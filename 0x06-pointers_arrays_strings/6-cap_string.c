@@ -1,34 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-/**
- *isLower - determines lowercase
- *@c: character
- *Return: 1 if true, 0 if false
- */
-int isLower(char c)
-{
-	return (c >= 97 && c <= 122);
-}
-
-/**
- *isDelimeter - determines if delimeter
- *@c: character
- *Return: 1 if true, 0 if false
- */
-int isDelimiter(char c)
-{
-	int i;
-	char delimiter[] = " \t\n,.!?\"(){}";
-
-	for (i = 0; i < 12; i++)
-	{
-		if (c == delimiter[i])
-		{
-			return (1);
-		}
-	}
-	return (0);
-}
 /**
  *cap_string - capitalize all words of string
  *@s: string
@@ -36,25 +6,32 @@ int isDelimiter(char c)
  */
 char *cap_string(char *s)
 {
-	char *ptr = s;
-	int delimit = 1;
+	int i;
 
-	while (*s)
+	while (s[i])
 	{
-		if (isDelimiter(*s))
+		while (!(s[i] >= 97 && s[i] <= 122))
 		{
-			delimit = 1;
+			i++;
 		}
-		else if (isLower(*s) && delimit)
+		if (s[i - 1] == ' ' ||
+		s[i - 1] == '\t' ||
+		s[i - 1] == '\n' ||
+		s[i - 1] == ',' ||
+		s[i - 1] == ';' ||
+		s[i - 1] == '.' ||
+		s[i - 1] == '!' ||
+		s[i - 1] == '?' ||
+		s[i - 1] == '"' ||
+		s[i - 1] == '(' ||
+		s[i - 1] == ')' ||
+		s[i - 1] == '{' ||
+		s[i - 1] == '}' ||
+		i == 0)
 		{
-			*s -= 32;
-			delimit = 0;
+			s[i] -= 32;
+			i++;
 		}
-		else
-		{
-			delimit = 0;
-		}
-		s++;
+		return (s);
 	}
-	return (ptr);
 }
