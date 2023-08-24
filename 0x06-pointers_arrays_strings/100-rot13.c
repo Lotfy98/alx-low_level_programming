@@ -7,13 +7,14 @@
 char *rot13(char *s)
 {
 	char *z = s;
-	char alphabets[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIKLMNOPQRSTUVWXYZ";
-	char ROT13[] = "nopqrstuwxyzabcdefghijklmNOPQRSTUVWXYZABSDEFGHIJKLM";
+	char alphabets[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char ROT13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i;
 
-	while (*s)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i = 0; i < 53; i++)
+
+		for (i = 0; i <= 52; i++)
 		{
 			if (*s == alphabets[i])
 			{
@@ -21,7 +22,6 @@ char *rot13(char *s)
 				break;
 			}
 		}
-		s++;
 	}
 	return (z);
 }
