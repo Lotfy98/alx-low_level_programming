@@ -1,9 +1,5 @@
 #include <stdio.h>
-/**
- *main - ENTRY POINT
- *Description: return a[2] = 98
- *Return: 0 to success
- */
+
 int main(void)
 {
 	int n;
@@ -25,3 +21,8 @@ int main(void)
 	printf("a[2] = %d\n", a[2]);
 	return (0);
 }
+/**
+ *main - ENTRY POINT
+ *Description: return a[2] = 98
+ *Return: 0 to success
+ */
