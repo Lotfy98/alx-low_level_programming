@@ -9,16 +9,16 @@ char *rot13(char *s)
 	char *z = s;
 	char alphabets[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char ROT13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int i;
+	int i, x;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 
-		for (i = 0; i <= 52; i++)
+		for (x = 0; x <= 53; x++)
 		{
 			if (*s == alphabets[i])
 			{
-				*s = ROT13[i];
+				*s[i] = ROT13[x];
 				break;
 			}
 		}
