@@ -4,11 +4,10 @@
  *@n: integer
  *Return: integer
  */
-print_number(int n)
+void print_number(int n)
 {
-	unsigned int x;
+	unsigned int x = n;
 
-	x = n;
 	while (n < 0)
 	{
 		_putchar('-');
