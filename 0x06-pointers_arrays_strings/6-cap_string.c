@@ -11,9 +11,8 @@ char *cap_string(char *s)
 	while (s[i])
 	{
 		while (!(s[i] >= 97 && s[i] <= 122))
-		{
 			i++;
-		}
+
 		if (s[i - 1] == ' ' ||
 		s[i - 1] == '\t' ||
 		s[i - 1] == '\n' ||
@@ -28,10 +27,8 @@ char *cap_string(char *s)
 		s[i - 1] == '{' ||
 		s[i - 1] == '}' ||
 		i == 0)
-		{
 			s[i] -= 32;
 			i++;
-		}
-		return (s);
 	}
+	return (s);
 }
