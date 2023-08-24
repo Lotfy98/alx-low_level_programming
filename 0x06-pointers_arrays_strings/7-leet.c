@@ -7,13 +7,13 @@
 char *leet(char *s)
 {
 	char *z = s;
-	int i = 0;
 	char x[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	char y[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	int i = 0;
 
 	while (*s)
 	{
-		for (i = 0; i <= 9 ; i++)
+		for (i = 0; i < 10; i++)
 		{
 			if (*s == x[i] || *s == x[i] - 32)
 			{
