@@ -11,6 +11,7 @@ int _strlen(char *s)
 	while (*s != '\0')
 		length += 1;
 		s++;
+
 	return (length);
 }
 /**
@@ -23,10 +24,10 @@ int _strlen(char *s)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = _strlen(n1);
-	int e = _strlen(n2);
-	int l, k, f, s;
-	int d = 0;
+	int d = 0, e, f, i, k, l = 0, s;
+
+	i = _strlen(n1);
+	e = _strlen(n2);
 
 	if (i > e)
 		l = i;
