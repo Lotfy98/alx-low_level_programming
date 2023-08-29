@@ -13,7 +13,7 @@ void print_diagsums(int *a, int size)
 		x += a[i];
 		y += a[size - i - 1];
 		a += size;
-		i++;
+	i++;
 	}
 	printf("%d, ", x);
 	printf("%d\n", y);
