@@ -2,7 +2,6 @@
 /**
  *print_chessboard - function that prints chessboard
  *@a: array
- *Return: 0 to success
  */
 void print_chessboard(char (*a)[8])
 {
