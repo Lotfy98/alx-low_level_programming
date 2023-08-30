@@ -13,5 +13,7 @@ int wildcmp(char *s1, char *s2);
 int _putchar(char c);
 int square(int n, int val);
 int checkPrime(int n, int oth);
+int check(char *s, int start, int end, int mod);
+int lastIndex(char *s);
 
 #endif
