@@ -39,5 +39,5 @@ int check(char *s, int start, int end, int mod)
 	else if (s[start] != s[end])
 		return (0);
 	else
-		return (checks, start + 1, end - 1, mod);
+		return (check, start + 1, end - 1, mod);
 }
