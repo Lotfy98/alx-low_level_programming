@@ -5,7 +5,7 @@
  *@argv: list
  *Return: 0 to success
  */
-int main(int agrc __attribute__((unused)), char const *agrv)
+int main(int agrc __attribute__((unused)), char const **agrv)
 {
 	printf("%s\n", argv[0]);
 	return (0);
