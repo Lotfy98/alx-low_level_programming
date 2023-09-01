@@ -1,16 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  *main - entry point
  *@argc: int
  *@argv: string
  *Return: 0 to succes, error with 1
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int result;
 
 	if (argc !=  3)
-	{
+		{
 		printf("Error\n");
 		return (1);
 	}
