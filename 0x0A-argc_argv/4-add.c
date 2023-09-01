@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 		x = argv[argc];
 		while (*x)
 		{
+			x++;
 			if (*x < '0' || *x > 9)
 			{
 				return (printf("Error\n"), 1);
 			}
-			x++;
 		}
 		result += atoi(argv[argc]);
 	}
