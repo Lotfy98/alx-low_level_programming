@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		while (*x)
 		{
 			x++;
-			if (*x < '0' || *x > 9)
+			if (*x < '0' || *x > '9')
 			{
 				return (printf("Error\n"), 1);
 			}
