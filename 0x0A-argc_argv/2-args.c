@@ -7,7 +7,9 @@
  */
 int main(int argc, char const **argv)
 {
-	for (int x = 0; x < argc; x++)
+	int x;
+
+	for (x = 0; x < argc; x++)
 	{
 		printf("%s\n", argv[x]);
 		argc--;
