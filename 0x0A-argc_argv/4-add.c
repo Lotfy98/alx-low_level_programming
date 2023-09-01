@@ -6,21 +6,17 @@
  *@argv: array
  *Return: 0 to success
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int result = 0;
 	char *x;
 
 	while (--argc)
 	{
-		x = argv[argc];
-		while (*x)
+		for (x = argv[argc]; *X; x++)
 		{
-			x++;
 			if (*x < '0' || *x > '9')
-			{
 				return (printf("Error\n"), 1);
-			}
 		}
 		result += atoi(argv[argc]);
 	}
