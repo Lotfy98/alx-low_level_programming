@@ -11,9 +11,9 @@
 char *create_array(unsigned int size, char c)
 {
 	char *array;
-	unsigned int i = 0;
+	int i = 0;
 
-	array = malloc(size * sizeof(char));
+	array = malloc(size);
 	if (array == NULL)
 		return (NULL);
 
