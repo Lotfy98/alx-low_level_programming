@@ -35,13 +35,13 @@ char *str_concat(char *s1, char *s2)
 
 	x1 = _strlen(s1);
 	x2 = _strlen(s2);
-	sum = x1 + x2 + "\0";
+	sum = x1 + x2 + 1;
 	z = malloc(sum);
 
 	if (z == 0)
 		return (0);
 
-	while (i < sum - "\0")
+	while (i < sum - 1)
 	{
 		if (i < x1)
 			z[i] = s1[i];
