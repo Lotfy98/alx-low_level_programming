@@ -54,7 +54,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 		{
-			for (e = 1; str[i + e] != ' ' && str[i + j]; e++)
+			for (e = 1; str[i + e] != ' ' && str[i + e]; e++)
 				;
 
 			e++;
@@ -67,7 +67,7 @@ char **strtow(char *str)
 					free(z[x]);
 
 				free(z[n - 1]);
-				free(x);
+				free(z);
 				return (NULL);
 			}
 
