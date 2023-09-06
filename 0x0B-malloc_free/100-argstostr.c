@@ -31,12 +31,8 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	while (i < ac)
-	{
-		i++;
-		lineByte++;
+	for (i = 0; i < ac; i++, lineByte++)
 		lineByte += _strlen(av[i]) + 1;
-	}
 
 	z = malloc(lineByte);
 
@@ -51,6 +47,6 @@ char *argstostr(int ac, char **av)
 		z[ptrCounter] = '\n';
 		ptrCounter++;
 	}
-	/*z[ptrCounter] = '\0';*/
+	z[ptrCounter] = '\0';
 	return (z);
 }
