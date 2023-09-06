@@ -35,10 +35,10 @@ char *argstostr(int ac, char **av)
 	{
 		i++;
 		lineByte++;
-		lineByte = _strlen(av[i]);
+		lineByte = _strlen(av[i]) + 1;
 	}
 
-	z = malloc(lineByte) + 1;
+	z = malloc(lineByte);
 
 	if (z == 0)
 		return (NULL);
