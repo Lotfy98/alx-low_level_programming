@@ -38,7 +38,7 @@ char *argstostr(int ac, char **av)
 		lineByte = _strlen(av[i]);
 	}
 
-	z = malloc(lineByte + 1);
+	z = malloc(lineByte) + 1;
 
 	if (z == 0)
 		return (NULL);
