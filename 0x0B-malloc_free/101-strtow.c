@@ -35,7 +35,7 @@ char **strtow(char *str)
 	char **z;
 
 	if (str == NULL || *str == '\0')
-		return (NUL);
+		return (NULL);
 
 	n = wordCounter(str);
 
@@ -47,7 +47,7 @@ char **strtow(char *str)
 	if (z == NULL)
 		return (NULL);
 
-	w[n - 1] = NULL;
+	z[n - 1] = NULL;
 
 	while (str[i])
 	{
