@@ -35,22 +35,19 @@ char *argstostr(int ac, char **av)
 	{
 		i++;
 		lineByte++;
-		lineByte += _strlen(av[i]);
+		lineByte += _strlen(av[i]) + 1;
 	}
 
-	z = malloc(sizeof(char) * lineByte + 1);
+	z = malloc(lineByte);
 
 	if (z == 0)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
-		while (av[i][e] != '\0')
-		{
-			e++;
-			ptrCounter++;
+		for (e = 0; av[i][e] != '\0' e++, ptrCounter++)
 			z[ptrCounter] = av[i][e];
-		}
+
 		z[ptrCounter] = '\n';
 		ptrCounter++;
 	}
