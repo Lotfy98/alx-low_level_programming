@@ -28,7 +28,7 @@ int wordCounter(char *s)
 /**
  *strtow - spilts string to words
  *@str: string
- *@return: array of words
+ *@Return: array of words
  */
 char **strtow(char *str)
 {
@@ -73,7 +73,7 @@ char **strtow(char *str)
 
 			for (y = 0; y < e; y++)
 			{
-				z[wordCount][y] = str[i + 1];
+				z[wordCount][y] = str[i + y];
 			}
 
 			z[wordCount][y] = '\0';
