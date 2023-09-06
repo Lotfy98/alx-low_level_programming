@@ -51,6 +51,6 @@ char *argstostr(int ac, char **av)
 		z[ptrCounter] = '\n';
 		ptrCounter++;
 	}
-	//z[ptrCounter] = '\0';
+	/*z[ptrCounter] = '\0';*/
 	return (z);
 }
