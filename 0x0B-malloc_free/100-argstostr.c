@@ -26,19 +26,17 @@ int _strlen(char *s)
 char *argstostr(int ac, char **av)
 {
 	int i = 0, e = 0, lineByte = 0, ptrCounter = 0;
-	char *z;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	while (i < ac)
 	{
-		lineByte += _strlen(av[i]);
+		lineByte += _strlen(av[i] + 1);
 		i++;
-		lineByte++;
 	}
 
-	z = malloc(lineByte + 1);
+	char *z = malloc(lineByte);
 
 	if (z == 0)
 		return (NULL);
