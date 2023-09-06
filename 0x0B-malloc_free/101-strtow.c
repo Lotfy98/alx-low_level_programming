@@ -13,7 +13,6 @@ int wordCounter(char *s)
 
 	while (s[i])
 	{
-		i++;
 		if (s[i] == ' ')
 		{
 			if (s[i + 1] != ' ' && s[i + 1] != '\0')
@@ -21,6 +20,7 @@ int wordCounter(char *s)
 		}
 		else if (i == 0)
 			n++;
+		i++;
 	}
 	n++;
 	return (n);
@@ -51,7 +51,7 @@ char **strtow(char *str)
 			for (e = 1; str[i + e] != ' ' && str[i + e]; e++)
 				;
 			e++;
-			z[wordCount] = (char *)malloc(e * sizeof(char));
+			z[wordCount] = (char *)malloc(e);
 			e--;
 			if (z[wordCount] == NULL)
 			{
