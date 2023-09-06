@@ -33,12 +33,12 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 	{
-		lineByte += _strlen(av[i] + 1);
+		lineByte += _strlen(av[i]);
 		i++;
 		lineByte++;
 	}
 
-	z = malloc(lineByte);
+	z = malloc(lineByte + 1);
 
 	if (z == 0)
 		return (NULL);
