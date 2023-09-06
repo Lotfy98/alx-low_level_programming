@@ -45,7 +45,7 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (e = 0; av[i][e] != '\0'; e++; ptrCounter++)
+		for (e = 0; av[i][e] != '\0'; e++, ptrCounter++)
 			z[ptrCounter] = av[i][e];
 
 		z[ptrCounter] = '\n';
