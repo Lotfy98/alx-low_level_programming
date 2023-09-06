@@ -44,6 +44,7 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 	{
+		i++;
 		while (av[i][e] != '\0')
 		{
 			z[ptrCounter] = av[i][e];
@@ -51,7 +52,6 @@ char *argstostr(int ac, char **av)
 			ptrCounter++;
 		}
 		z[ptrCounter] = '\n';
-		i++;
 		ptrCounter++;
 	}
 	z[ptrCounter] = '\0';
