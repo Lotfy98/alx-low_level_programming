@@ -45,12 +45,9 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		while (av[i][e] != '\0')
-		{
+		for (e = 0; av[i][e] != '\0'; e++; ptrCounter++)
 			z[ptrCounter] = av[i][e];
-			e++;
-			ptrCounter++;
-		}
+
 		z[ptrCounter] = '\n';
 		ptrCounter++;
 	}
