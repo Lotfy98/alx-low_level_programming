@@ -32,9 +32,9 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	for (i = 0; i < ac; i++, lineByte++)
-		lineByte += _strlen(av[i]) + 1;
+		lineByte += _strlen(av[i]);
 
-	z = malloc(lineByte);
+	z = malloc(lineByte + 1);
 
 	if (z == 0)
 		return (NULL);
