@@ -43,7 +43,7 @@ char *strin_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	while (s1[x] != '\0')
 	{
-		z[x] = s2[x];
+		z[x] = s1[x];
 		x++;
 	}
 	while (y < n)
