@@ -25,7 +25,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
  *@ptr: pointerto mem
  *@old_size: size of allocated space
  *@new_size: size of new mem block
- *Return: ptr array
+ *Return:ptr array
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
