@@ -9,11 +9,10 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	int *x;
+	int *x = malloc(b);
 
 	if (x == NULL)
-		return (NULL);
+		return (98);
 
-	x = (int *)malloc(b * sizeof(int *));
 	return (x);
 }
