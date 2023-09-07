@@ -52,6 +52,6 @@ char *strin_nconcat(char *s1, char *s2, unsigned int n)
 		y++;
 		x++;
 	}
-	z[i] = '\0';
+	z[x] = '\0';
 	return (z);
 }
