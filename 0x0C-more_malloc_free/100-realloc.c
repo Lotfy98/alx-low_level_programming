@@ -29,8 +29,8 @@ char *_memcpy(char *dest, char *src, unsigned int n)
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *newPtr, *old_ptr;
-	unsigned int mv;
+	char *newPtr, *oldPtr;
+	unsigned int i = 0;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -44,9 +44,24 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	newPtr = malloc(new_size);
 	if (newPtr == NULL)
 		return (NULL);
-	old_ptr = ptr;
-	mv = new_size < old_size ? new_size : old_size;
-	_memcpy(newPtr, ptr, mv);
+	oldPtr = ptr;
+	if (new_size < old_size)
+	{
+		while (i < old_size)
+		{
+			newPtr[i] = oldPtr[i];
+			i++;
+		}
+
+	}
+	if (old_size < new_size)
+	{
+		while (i < old_size)
+		{
+			newPtr[i] = oldPtr[i];
+			i++;
+		}
+	}
 	free(ptr);
 	return (newPtr);
 }
