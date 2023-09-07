@@ -160,7 +160,7 @@ int main(int argc, char*argv[])
 	n1 = _atoi(argv[1]);
 	n2 = _atoi(argv[2]);
 	result = mult(n1, n2, l1, l2);
-	_puts(result[0]);
+	printf("%i\n", result[0]);
 	free(n1);
 	free(n2);
 	free(result);
