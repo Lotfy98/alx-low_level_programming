@@ -31,26 +31,23 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *newPtr;
 	unsigned int mv;
-	if (new_size == old_size)
-		return (ptr);
-	if (new_size == 0)
-		return (NULL);
+
 	if (ptr == NULL)
 	{
-		newPtr = malloc(new_size);
-		if (newPtr == NULL)
+		if (new_size == 0)
+		{
+			free(ptr);
 			return (NULL);
-		return (newPtr);
+		}
+		return (malloc(new_size));
 	}
-	if (new_size == 0 && ptr != NULL)
-	{
-		free(ptr);
+	if (new_size == old_size)
+		return (ptr);
+	newPtr = malloc(new_size);
+	if (newPtr == NULL)
 		return (NULL);
-	}
-	if (new_size < old_size)
-		mv = new_size;
-	else if (old_size < new_size)
-		mv = old_size;
+	mv = new_size < old_size ? new_size : old_size;
+
 	_memcpy(newPtr, ptr, mv);
 	free(ptr);
 	return (newPtr);
