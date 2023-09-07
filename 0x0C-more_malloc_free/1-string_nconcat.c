@@ -19,13 +19,13 @@ int _strlen(char *s)
 	return (length);
 }
 /**
- *strin_nconcat - function concats 2 strings
+ *string_nconcat - function concats 2 strings
  *@s1: pointer to 1st string
  *@s2: pointer to 2nd string
  *@n: num of bytes to concat
  *Return: pointer
  */
-char *strin_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *z;
 	unsigned int x = 0, y = 0, l1, l2;
