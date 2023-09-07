@@ -50,7 +50,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	if (new_size < old_size)
 		mv = new_size;
-	else
+	else if (old_size < new_size)
 		mv = old_size;
 	_memcpy(newPtr, ptr, mv);
 	free(ptr);
