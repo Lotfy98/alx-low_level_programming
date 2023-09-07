@@ -136,6 +136,23 @@ int mult(int *n1, int *n2, int l1, int l2)
 	return (result);
 }
 /**
+ *_print - prints integer
+ *@n: integer
+ *Return: 0
+ */
+void _print(unsigned long int n)
+{
+	unsigned long int x = 1, y, z;
+
+	for (y = 0; n  / x > 9; i++, x *= 10)
+		;
+	for (; x >= 1; n %= x, x /= 10)
+	{
+		z = n / x;
+		_putchar('0' + z);
+	}
+}
+/**
  *main - entry point
  *@argc: counter
  *@argv: value
@@ -160,7 +177,8 @@ int main(int argc, char*argv[])
 	n1 = _atoi(argv[1]);
 	n2 = _atoi(argv[2]);
 	result = mult(n1, n2, l1, l2);
-	printf("%i\n", result[0]);
+	_print( result[0]);
+	_putchar('\n');
 	free(n1);
 	free(n2);
 	free(result);
