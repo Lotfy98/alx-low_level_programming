@@ -95,7 +95,7 @@ void _print(unsigned long int n)
  *@argv: value
  *Return: 0 to success
  */
-int main(int argc, char*argv[])
+int main(int argc, char *argv[])
 {
 	int res, l1, l2, n1, n2, i = 0;
 	char s[] = "Error\n";
