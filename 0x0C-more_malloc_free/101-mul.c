@@ -3,14 +3,27 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
+ *_strlen - a function that returns the length of a string
+ *@s: character
+ *Return: length of string
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s != '\0')
+	{
+		length += 1;
+		s++;
+	}
+	return (length);
+}
+/**
  * _putchar - write char c to stdout
  * @c: char to print
  * Return: on succes 1. and on error -1
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+int _putchar(char c);
 /**
  *_isdigit - function to check for digit through 0 to 9
  *@c: integer
@@ -84,9 +97,12 @@ void _print(unsigned long int n)
  */
 int main(int argc, char*argv[])
 {
+	int res, l1, l2, n1, n2, i = 0;
+	char s[] = "Error\n";
+
 	if (argc != 3)
 	{
-		_print("Error\n");
+		printf("%s", s);
 		exit(98);
 	}
 	l1 = _strlen(argv[1]);
@@ -94,7 +110,7 @@ int main(int argc, char*argv[])
 	{
 		if (!_isdigit(argv[1][i]))
 		{
-			_print("Error\n");
+			printf("%s", s);
 			exit(98);
 		}
 		i++;
@@ -104,7 +120,7 @@ int main(int argc, char*argv[])
 	{
 		if (!_isdigit(argv[2][i]))
 		{
-			_print("Error\n");
+			printf("%s", s);
 			exit(98);
 		}
 		i++;
