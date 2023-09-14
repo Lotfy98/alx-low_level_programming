@@ -43,7 +43,6 @@ void print_all(const char * const format, ...)
 			}
 			default:
 				i++;
-				x = 1;
 				continue;
 		}
 		if (format[i + 1] != '\0' && x == 0)
