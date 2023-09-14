@@ -7,7 +7,7 @@
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-	char *s;
+	char c, *s;
 	va_list args;
 
 	va_start(args, format);
@@ -17,7 +17,8 @@ void print_all(const char * const format, ...)
 		{
 			case ('c'):
 			{
-				printf("%c, ", va_arg(args, int));
+				c = va_arg(args, int);
+				printf("%c, ", c);
 				break;
 			}
 			case ('i'):
