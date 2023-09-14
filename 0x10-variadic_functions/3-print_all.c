@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				break;
 			}
 		}
-		if (*(f) && (*f != ' '))
+		if (*(s) && (*s != ' '))
 			printf(", ");
 	}
 	printf("\n");
