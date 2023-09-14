@@ -6,14 +6,14 @@
  */
 void print_all(const char * const format, ...)
 {
-	char *s, *f;
+	int i = 0;
+	char *s;
 	va_list args;
 
 	va_start(args, format);
-	f = (char *)format;
-	while (*f)
+	while (format[i])
 	{
-		switch (*f++)
+		switch (format[i++])
 		{
 			case ('c'):
 			{
@@ -33,7 +33,7 @@ void print_all(const char * const format, ...)
 			case ('s'):
 			{
 				s = va_arg(args, char *);
-				printf("%s", s ? s : "(nil)");
+				printf("%s, ", s ? s : "(nil)");
 				break;
 			}
 		}
