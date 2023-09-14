@@ -30,7 +30,7 @@ void print_all(const char * const format, ...)
 		{
 			case ('c'):
 				c = va_arg(args, int);
-				printf("%c, ", c);
+				printf("%c", c);
 				x = 1;
 				break;
 			case ('i'):
