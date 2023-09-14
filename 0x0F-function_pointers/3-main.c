@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(100);
 	}
-	res = op_function(a, b);
-	printf("%i\n", res);
+
+	printf("%i\n", op_function(a, b));
 	return (0);
 }
