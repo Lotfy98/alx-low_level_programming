@@ -30,14 +30,17 @@ void print_all(const char * const format, ...)
 				printf("%c", c), x = 1;
 				break;
 			case ('i'):
-				printf("%d", va_arg(args, int)), x = 1;
+				printf("%d", va_arg(args, int));
+				x = 1;
 				break;
 			case ('f'):
-				printf("%f", va_arg(args, double)), x = 1;
+				printf("%f", va_arg(args, double));
+				x = 1;
 				break;
 			case ('s'):
 				s = va_arg(args, char *);
-				printf("%s", s ? s : "(nil)"), x = 1;
+				printf("%s", s ? s : "(nil)");
+				x = 1;
 		}
 		i++;
 	}
