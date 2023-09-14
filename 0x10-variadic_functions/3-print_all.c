@@ -6,7 +6,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+	int x, i = 0;
 	char c, *s;
 	va_list args;
 
@@ -45,7 +45,7 @@ void print_all(const char * const format, ...)
 				x = 1;
 				break;
 		}
-		if (format[i + 1] != '\0' && flag == 0)
+		if (format[i + 1] != '\0' && x == 0)
 			printf(", ");
 		i++;
 	}
