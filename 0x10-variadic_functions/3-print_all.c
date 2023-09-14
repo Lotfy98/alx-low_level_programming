@@ -17,6 +17,7 @@ void print_all(const char * const format, ...)
 	while (format && format[i] != '\0')
 	{
 		int y = 0;
+
 		while (syms[y])
 		{
 			if (format[i] == syms[y] && x)
