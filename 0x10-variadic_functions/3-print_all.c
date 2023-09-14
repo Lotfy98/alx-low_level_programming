@@ -5,22 +5,22 @@
  *Return: void
  */
 void print_all(const char * const format, ...)
-{
-	int x, i = 0;
-	char c, *s;
-	const char syms[] = "cifs";
-	va_list args;
+{ int x, i = 0;
+char c, *s;
+const char syms[] = "cifs";
+va_list args;
 
 	va_start(args, format);
 	while (format && format[i] != '\0')
-	{
-		int y = 0;
+	{ int y = 0;
 
 		while (syms[y])
 		{
 			if (format[i] == syms[y] && x)
-				printf(", "), break;
-			y++;
+			{
+				printf(", ");
+				break;
+			} y++;
 		}
 		switch (format[i])
 		{
