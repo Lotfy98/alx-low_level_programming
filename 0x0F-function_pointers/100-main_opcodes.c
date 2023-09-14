@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char *z = (char *)main;
+	unsigned char *z = (unsigned char *)main;
 	int x;
 
 	if (argc != 2)
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		printf("Error\n"), exit(2);
 
 	while (x--)
-		printf("%02hx%s", *z++, x ? " " : "\n");
+		printf("%02hhx%s", *z++, x ? " " : "\n");
 
 	return (0);
 }
