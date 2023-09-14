@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 		{
 			case ('c'):
 			{
-				printf("%c", va_arg(args, char));
+				printf("%c", va_arg(args, int));
 				break;
 			}
 			case ('i'):
@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				break;
 			}
 		}
-		if ((*f) && (*f != ' '))
+		if (*(f) && (*f != ' '))
 			printf(", ");
 	}
 	printf("\n");
