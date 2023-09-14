@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 				printf("%c", va_arg(args, int));
 				break;
 			}
-			case ('i' || 'd'):
+			case ('i'):
 			{
 				printf("%d", va_arg(args, int));
 				break;
