@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 				x = 0;
 				break;
 			}
-			case ('i' || 'd'):
+			case ('i'):
 			{
 				printf("%d", va_arg(args, int));
 				x = 0;
@@ -37,13 +37,14 @@ void print_all(const char * const format, ...)
 			case ('s'):
 			{
 				s = va_arg(args, char *);
-				printf("%s", s ? s : "(nil), ");
+				printf("%s", s ? s : "(nil)");
 				x = 0;
 				break;
 			}
 			default:
+				i++;
 				x = 1;
-				break;
+				continue;
 		}
 		if (format[i + 1] != '\0' && x == 0)
 			printf(", ");
