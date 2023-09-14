@@ -6,13 +6,22 @@
  */
 void print_all(const char * const format, ...)
 {
-	int x, i = 0;
+	int x, y = 0, i = 0;
 	char c, *s;
+	const char syms[] = "cifs";
 	va_list args;
 
 	va_start(args, format);
+
+	
 	while (format && format[i] != '\0')
 	{
+		while (syms[y])
+		{
+			if (format[i] == syms[y] && x == 0)
+				printf(", "), break;
+			y++;
+		}
 		switch (format[i])
 		{
 			case ('c'):
@@ -45,8 +54,6 @@ void print_all(const char * const format, ...)
 				x = 1;
 				break;
 		}
-		if (format[i + 1] != '\0' && x == 0)
-			printf(", ");
 		i++;
 	}
 	printf("\n");
