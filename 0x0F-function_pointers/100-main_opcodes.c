@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdio.h>
 /**
  *main - entry point
  *@argc: counter
@@ -11,12 +12,12 @@ int main(int argc, char *argv[])
 	int i, x;
 
 	if (argc != 2)
-		printf("Error\n"),return (1);
+		printf("Error\n"),exit(1);
 
 	x = atoi(argv[1]);
 	if (x < 0)
-		printf("Error\n"),return (2);
-	while (b--)
+		printf("Error\n"),exit(2);
+	while (x--)
 		printf("%02hx%s", *z++, x ? " " : "\n");
 	return (0);
 }
