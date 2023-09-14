@@ -13,13 +13,16 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	
+
 	while (format && format[i] != '\0')
 	{
 		while (syms[y])
 		{
 			if (format[i] == syms[y] && x == 0)
-				printf(", "), break;
+			{
+				printf(", ");
+				break;
+			}
 			y++;
 		}
 		switch (format[i])
