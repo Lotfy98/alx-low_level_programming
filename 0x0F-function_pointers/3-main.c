@@ -7,7 +7,7 @@
  */
 int main(int argc, char **argv)
 {
-	int *op_function(int, int), a, b;
+	int (*op_function)(int, int), a, b;
 
 	if (argc != 4)
 	{
@@ -18,13 +18,13 @@ int main(int argc, char **argv)
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	op_fuinction = get_op_func(argv[2]);
-	if (op_function == NULL)
+	op_function = get_op_func(argv[2]);
+	if (!op_function)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (b == NULL && (argv[2][0] == '/' || argv[2][0] == '%'))
+	if (!b && (argv[2][0] == '/' || argv[2][0] == '%'))
 	{
 		printf("Error\n");
 		exit(98);
