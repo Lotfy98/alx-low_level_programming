@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	{
 		while (syms[y])
 		{
-			if (format[i] == syms[y] && x == 0)
+			if (format[i] == syms[y] && x)
 			{
 				printf(", ");
 				break;
@@ -30,20 +30,20 @@ void print_all(const char * const format, ...)
 			case ('c'):
 				c = va_arg(args, int);
 				printf("%c, ", c);
-				x = 0;
+				x = 1;
 				break;
 			case ('i'):
 				printf("%d", va_arg(args, int));
-				x = 0;
+				x = 1;
 				break;
 			case ('f'):
 				printf("%f", va_arg(args, double));
-				x = 0;
+				x = 1;
 				break;
 			case ('s'):
 				s = va_arg(args, char *);
 				printf("%s", s ? s : "(nil)");
-				x = 0;
+				x = 1;
 				break;			
 		}
 		i++;
