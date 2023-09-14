@@ -53,9 +53,6 @@ void print_all(const char * const format, ...)
 				x = 0;
 				break;
 			}
-			default:
-				x = 1;
-				break;
 		}
 		i++;
 	}
