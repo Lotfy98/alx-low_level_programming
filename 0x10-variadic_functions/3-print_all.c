@@ -6,7 +6,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int x, i = 0, y = 0;
+	int x, i = 0;
 	char c, *s;
 	const char syms[] = "cifs";
 	va_list args;
@@ -14,6 +14,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (format && format[i] != '\0')
 	{
+		int y = 0;
 		while (syms[y])
 		{
 			if (format[i] == syms[y] && x)
