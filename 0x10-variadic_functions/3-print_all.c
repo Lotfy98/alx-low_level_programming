@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 
 
-	while (format && format[i])
+	while (format && format[i] != '\0')
 	{
 		while (syms[y])
 		{
@@ -28,31 +28,23 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case ('c'):
-			{
 				c = va_arg(args, int);
 				printf("%c, ", c);
 				x = 0;
 				break;
-			}
 			case ('i'):
-			{
 				printf("%d", va_arg(args, int));
 				x = 0;
 				break;
-			}
 			case ('f'):
-			{
 				printf("%f", va_arg(args, double));
 				x = 0;
 				break;
-			}
 			case ('s'):
-			{
 				s = va_arg(args, char *);
 				printf("%s", s ? s : "(nil)");
 				x = 0;
-				break;
-			}
+				break;			
 		}
 		i++;
 	}
