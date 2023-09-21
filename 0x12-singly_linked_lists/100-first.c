@@ -6,6 +6,6 @@
 void printBefore(void) __attribute__ ((constructor));
 void printBefore(void)
 {
-	printf("you're breat! and yet, you must allow,\n"
+	printf("You're beat! and yet, you must allow,\n"
 		"I bore my house upon my back!\n");
 }
