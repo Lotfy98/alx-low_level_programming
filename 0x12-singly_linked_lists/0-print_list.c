@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  *print_list - prints list_l
  *@h: pointer to list
