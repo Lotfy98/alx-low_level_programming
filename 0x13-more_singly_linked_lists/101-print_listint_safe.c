@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 		diff = head - head->next;
 		nodes++;
 		printf("[%p] %i\n", (void *)head, head->n);
-		if (diff > 0)
+		if (diff > 0 && head->next)
 			head = head->next;
 		else if (head->next)
 		{
