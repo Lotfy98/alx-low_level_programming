@@ -6,21 +6,22 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes = 0;
+	size_t nodes = 0, i = 0;
 	long int diff;
 	const listint_t *arr[1024];
 
 	while (head)
 	{
-		for (size_t i = 0; i < nodes; i++)
+		for (i < nodes)
 		{
-			if (array[i] == head)
+			if (arr[i] == head)
 			{
 				printf("-> [%p] %i\n", (void *)head, head->n);
 				return (nodes);
 			}
+			i++;
 		}
-		array[nodes] = head;
+		arr[nodes] = head;
 		nodes++;
 		diff = head - head->next;
 		printf("[%p] %i\n", (void *)head, head->n);
