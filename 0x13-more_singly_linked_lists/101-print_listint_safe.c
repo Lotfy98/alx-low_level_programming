@@ -12,7 +12,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (head)
 	{
-		for (i < nodes)
+		while (i < nodes)
 		{
 			if (arr[i] == head)
 			{
