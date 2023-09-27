@@ -21,7 +21,7 @@ size_t print_listint_safe(const listint_t *head)
 			i++;
 		}
 		nodes++;
-		args = _realloc(args, num, head);
+		args = _realloc(args, nodes, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
