@@ -8,7 +8,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t nWirte;
+	ssize_t nWrite;
 	size_t len;
 
 	if (!filename)
@@ -17,14 +17,14 @@ int append_text_to_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 		return (-1);
-	if (tex_content == NULL)
+	if (!text_content)
 		return (1);
 
 	len = 0;
 	while (text_content[len] != '\0')
 		len++;
 	nWrite = write(fd, text_content, len);
-	if (nWrite == -1 || (size_t) nWirte != len)
+	if (nWrite == -1 || (size_t) nWrite != len)
 	{
 		close(fd);
 		return (-1);
