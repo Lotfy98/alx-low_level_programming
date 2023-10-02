@@ -8,7 +8,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t nWirte;
+	ssize_t nWrite;
 	size_t len;
 
 	if (!filename)
