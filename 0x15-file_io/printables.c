@@ -4,7 +4,7 @@
  *@e_ident: ptr to arr of bytes to interpret file
  *Return: void
  */
-void print_osabi(unsigned char e_ident)
+void print_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
 	switch (e_ident[EI_OSABI])
@@ -21,7 +21,7 @@ void print_osabi(unsigned char e_ident)
  *@e_ident: ptr to arr of bytes to interpret file
  *Return: void
  */
-void print_abiversion(unsigned char e_ident)
+void print_abiversion(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n", e_ident[EI_ABIVERSION]);
 }

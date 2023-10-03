@@ -21,7 +21,7 @@ void print_magic(unsigned char *e_ident)
  *@e_ident: ptr to arr of bytes to interpret the file
  *Return: void
  */
-void print_class(unsigned char e_ident)
+void print_class(unsigned char *e_ident)
 {
 	printf("  Class:                             ");
 	switch (e_ident[EI_CLASS])
@@ -41,7 +41,7 @@ void print_class(unsigned char e_ident)
  *@e_ident: ptr to arr of bytes to interpret file
  *Return: void
  */
-void print_data(unsigned char e_ident)
+void print_data(unsigned char *e_ident)
 {
 	printf("  Data:                              ");
 	switch (e_ident[EI_DATA])
@@ -61,7 +61,7 @@ void print_data(unsigned char e_ident)
  *@e_ident: ptr to arr of bytes to interpret file
  *Return: void
  */
-void print_version(unsigned char e_ident)
+void print_version(unsigned char *e_ident)
 {
 	printf("  Version:                           ");
 	switch (e_ident[EI_VERSION])
