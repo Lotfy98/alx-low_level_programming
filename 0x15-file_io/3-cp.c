@@ -1,10 +1,9 @@
 #include "main.h"
 #define BUFFER_SIZE 1024
-
 /**
  *main - program
- *@ac: argument count
- *@av: argument vector
+ *@argc: argument count
+ *@argv: argument vector
  *Return: 1 on success 0 on failure
  */
 int main(int argc, char *argv[])
@@ -18,7 +17,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fileFrom = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fileFrom = open(argv[1], O_RDONLY);
 	if (fileFrom < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -46,6 +45,11 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
+	}
+	if (close(fileFrom) < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fileFrom);
+		exit(100);
 	}
 	if (close(fileTo) < 0)
 	{
